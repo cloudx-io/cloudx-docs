@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CloudX</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            CloudX SDK Android
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":sdk:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="CloudX SDK Android::io.cloudx.sdk/CloudX///PointingToDeclaration//165651098">
+  <div class="breadcrumbs"><a href="../../../index.html">CloudX SDK Android</a><span class="delimiter">/</span><a href="../index.html">io.cloudx.sdk</a><span class="delimiter">/</span><span class="current">CloudX</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Cloud</span><wbr></wbr><span><span>X</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">CloudX</a></div><p class="paragraph">This is an entry point to CloudX SDK. Before creating any ad instances, <a href="initialize.html">initialize</a> SDK first.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="792730968%2FClasslikes%2F165651098" anchor-label="InitializationParams" id="792730968%2FClasslikes%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-initialization-params/index.html"><span>Initialization</span><wbr></wbr><span><span>Params</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="792730968%2FClasslikes%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-initialization-params/index.html">InitializationParams</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>appKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>initEndpointUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Initialization params</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-281765689%2FProperties%2F165651098" anchor-label="isInitialized" id="-281765689%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-initialized.html"><span>is</span><wbr></wbr><span><span>Initialized</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-281765689%2FProperties%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="is-initialized.html">isInitialized</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Current initialization status of CloudX SDK.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1842505182%2FFunctions%2F165651098" anchor-label="createBanner" id="-1842505182%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-banner.html"><span>create</span><wbr></wbr><span><span>Banner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1842505182%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="create-banner.html"><span class="token function">createBanner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">placementName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">listener<span class="token operator">: </span><a href="../-ad-view-listener/index.html">AdViewListener</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-cloud-x-ad-view/index.html">CloudXAdView</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Creates a standard banner (320x50) ad placement instance which then can be added to a view hierarchy and load/render ads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-93457178%2FFunctions%2F165651098" anchor-label="createInterstitial" id="-93457178%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-interstitial.html"><span>create</span><wbr></wbr><span><span>Interstitial</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-93457178%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="create-interstitial.html"><span class="token function">createInterstitial</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">placementName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">listener<span class="token operator">: </span><a href="../-interstitial-listener/index.html">InterstitialListener</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-cloud-x-interstitial-ad/index.html">CloudXInterstitialAd</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Creates <a href="../-cloud-x-interstitial-ad/index.html">CloudXInterstitialAd</a> ad instance responsible for rendering non-rewarded fullscreen ads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1921791925%2FFunctions%2F165651098" anchor-label="createMREC" id="-1921791925%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-m-r-e-c.html"><span>create</span><wbr></wbr><span><span>MREC</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1921791925%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="create-m-r-e-c.html"><span class="token function">createMREC</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">placementName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">listener<span class="token operator">: </span><a href="../-ad-view-listener/index.html">AdViewListener</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-cloud-x-ad-view/index.html">CloudXAdView</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Creates MREC banner (300x250) ad placement instance which then can be added to a view hierarchy and load/render ads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-895353857%2FFunctions%2F165651098" anchor-label="createNativeAdMedium" id="-895353857%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-native-ad-medium.html"><span>create</span><wbr></wbr><span>Native</span><wbr></wbr><span>Ad</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-895353857%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="create-native-ad-medium.html"><span class="token function">createNativeAdMedium</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">placementName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">listener<span class="token operator">: </span><a href="../-ad-view-listener/index.html">AdViewListener</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-cloud-x-ad-view/index.html">CloudXAdView</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Creates Native Medium ad placement instance which then can be added to a view hierarchy and load/render ads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1235298369%2FFunctions%2F165651098" anchor-label="createNativeAdSmall" id="1235298369%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-native-ad-small.html"><span>create</span><wbr></wbr><span>Native</span><wbr></wbr><span>Ad</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1235298369%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="create-native-ad-small.html"><span class="token function">createNativeAdSmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">placementName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">listener<span class="token operator">: </span><a href="../-ad-view-listener/index.html">AdViewListener</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-cloud-x-ad-view/index.html">CloudXAdView</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Creates Native small ad placement instance which then can be added to a view hierarchy and load/render ads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1624969510%2FFunctions%2F165651098" anchor-label="createRewardedInterstitial" id="1624969510%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-rewarded-interstitial.html"><span>create</span><wbr></wbr><span>Rewarded</span><wbr></wbr><span><span>Interstitial</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1624969510%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="create-rewarded-interstitial.html"><span class="token function">createRewardedInterstitial</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">placementName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">listener<span class="token operator">: </span><a href="../-rewarded-interstitial-listener/index.html">RewardedInterstitialListener</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-cloud-x-rewarded-ad/index.html">CloudXRewardedAd</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Creates <a href="../-cloud-x-rewarded-ad/index.html">CloudXRewardedAd</a> ad instance responsible for rendering non-rewarded fullscreen ads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1276460967%2FFunctions%2F165651098" anchor-label="initialize" id="-1276460967%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initialize.html"><span><span>initialize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1276460967%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">initializationParams<span class="token operator">: </span><a href="-initialization-params/index.html">CloudX.InitializationParams</a><span class="token punctuation">, </span></span><span class="parameter ">listener<span class="token operator">: </span><a href="../-cloud-x-initialization-listener/index.html">CloudXInitializationListener</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Initializes CloudX SDK; essential first step before loading and displaying any ads.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="820096529%2FFunctions%2F165651098" anchor-label="setPrivacy" id="820096529%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-privacy.html"><span>set</span><wbr></wbr><span><span>Privacy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="820096529%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="set-privacy.html"><span class="token function">setPrivacy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">privacy<span class="token operator">: </span><a href="../-cloud-x-privacy/index.html">CloudXPrivacy</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Set privacy data which is then will be used in ad loading process.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-198687662%2FFunctions%2F165651098" anchor-label="setTargeting" id="-198687662%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-targeting.html"><span>set</span><wbr></wbr><span><span>Targeting</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-198687662%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="set-targeting.html"><span class="token function">setTargeting</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">targeting<span class="token operator">: </span><a href="../-cloud-x-targeting/index.html">CloudXTargeting</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Set targeting data which is then will be used in ad loading process.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 CloudX, Inc. All Rights Reserved</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

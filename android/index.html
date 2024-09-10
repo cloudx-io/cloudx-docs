@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CloudX SDK Android</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="index.html">
+                            CloudX SDK Android
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":sdk:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageIds="CloudX SDK Android::////PointingToDeclaration//165651098">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Cloud</span><wbr></wbr><span><span>X</span></span> <span><span>SDK</span></span> <span><span>Android</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><p class="paragraph">CloudX SDK - is a mediation SDK; it allows you to load and display ads from 3rd party bid network adapters.</p><h2 class="">Prerequisites</h2><ul><li><p class="paragraph">Android Studio Hedgehog | 2023.1.1 or higher</p></li><li><p class="paragraph">minimum supported Android OS level: 21 (Android 5.0)</p></li></ul><h2 class="">CloudX SDK build and distribution</h2><p class="paragraph">This project uses Maven approach; all adapters and core SDK module already have <code class="lang-kotlin">maven-plugin</code> set up for Maven Local repository distribution.</p><h3 class="">Publish to Maven Local</h3><p class="paragraph">Run Gradle command:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">./gradlew publishReleasePublicationToMavenLocal</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">For more details on custom Maven repository setup, consider reading <a href="https://developer.android.com/build/publish-library/upload-library">this</a></p><h2 class="">Add CloudX dependencies to your project</h2><h3 class="">Maven Local approach</h3><p class="paragraph">Add respective repositories to your project depending on which CloudX SDK adapters are used.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">repositories {<br>   mavenCentral()<br>   <br>   // To fetch CloudX SDK dependencies if Maven Local build approach is used. <br>   mavenLocal()<br>   <br>   // If Mintegral adapter is used, add Mintegral SDK repo:<br>   maven(&quot;https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea&quot;)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">In project's <code class="lang-kotlin">build.gradle.kts</code> file add all the adapters you want to use:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>   val version = 0.0.0<br>   <br>   // Core SDK dependency.<br>   implementation(&quot;io.cloudx:sdk:$version&quot;) <br>   <br>   // List of adapters you need.<br>   // For example, Mintegral adapter.<br>   implementation(&quot;io.cloudx:adapter-mintegral$version&quot;)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Gradle Composite build approach</h3><p class="paragraph">In your project's <code class="lang-kotlin">settings.gradle.kts</code> add this line:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">includeBuild(&quot;&lt;path-to-cloudx-project&gt;&quot;)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Add respective repositories to your project depending on which CloudX SDK adapters are used.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">repositories {<br>   mavenCentral()<br>   <br>   // If Mintegral adapter is used, add Mintegral SDK repo:<br>   maven(&quot;https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea&quot;)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">In your project app module's <code class="lang-kotlin">build.gradle.kts</code> add core sdk and adapter dependencies:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    // cloudx-sdk is a root project name of CloudX SDK.<br>    <br>    // Core SDK dependency.<br>   implementation(&quot;cloudx-sdk:sdk&quot;) <br>   <br>   // List of adapters you need.<br>   // For example, Mintegral adapter.<br>   implementation(&quot;cloudx-sdk:adapter-mintegral&quot;)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">For more info, consider reading <a href="https://docs.gradle.org/current/userguide/composite_builds.html">this</a></p><h2 class="">List of available adapters and supported ad types</h2><table><thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><i>Ad network</i></td><td><i>Gradle dependency</i></td><td>Banner</td><td>MREC</td><td>Interstitial</td><td>Rewarded</td><td>Native Small</td><td>Native Medium</td></tr><tr><td>Google Ad Manager</td><td>io.cloudx:adapter-google-admanager:0.0.0</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Meta Audience Network</td><td>io.cloudx:adapter-meta:0.0.0</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>x</td><td>x</td></tr><tr><td>Mintegral</td><td>io.cloudx:adapter-mintegral:0.0.0</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr></tbody></table><h2 class="">Proguard</h2><p class="paragraph">All the <code class="lang-kotlin">consumer-rules.pro</code> files are already included into the project's modules. Also, there's <code class="lang-kotlin">build-logic/common-adapter-consumer-rules.pro</code> rules applied to each adapter module.</p><h2 class="">build-logic module</h2><p class="paragraph">Build logic contains common gradle rules, plugins, utilities used across the project.</p><p class="paragraph">Notable mentions:</p><ul><li><p class="paragraph"><code class="lang-kotlin">dokka-conventions.gradle.kts</code> responsible for <a href="https://kotlinlang.org/docs/dokka-get-started.html">Dokka</a> KDoc documentation generation</p></li><li><p class="paragraph"><code class="lang-kotlin">cloudx-sdk-publishing-conventions.gradle.kts</code> sets up Maven plugin for each CloudX SDK module.</p></li></ul><h2 class="">How to use CloudX SDK</h2><p class="paragraph">Make sure to <a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/initialize.html">initialize</a> SDK first. To do so, you need to provide:</p><ol><li><p class="paragraph"><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a> - Android Context</p></li><li><p class="paragraph"><i>appKey</i> - Identifier of the publisher app registered with Cloudx</p></li><li><p class="paragraph"><i>initEndpointUrl</i> - endpoint to fetch an initial SDK configuration from</p></li><li><p class="paragraph">(optional) initialization <a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x-initialization-listener/index.html">listener</a></p></li></ol><h3 class="">After a successful initialization, now you can create an ad instance of your choice:</h3><ul><li><p class="paragraph"><a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/create-banner.html">Banner</a>, <a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/create-m-r-e-c.html">MREC</a> ads are rectangular ads that occupy a portion of an app's layout. They stay on screen while users are interacting with the app, either anchored at the top or bottom of the screen or inline with content as the user scrolls</p></li><li><p class="paragraph">Native <a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/create-native-ad-small.html">Small</a>, <a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/create-native-ad-medium.html">Medium</a> ads are ad assets that are presented to users through UI components that are native to the platform. They're shown using the same types of views with which you're already building your layouts, and can be formatted to match your app's visual design</p></li><li><p class="paragraph"><a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/create-interstitial.html">Interstitial</a> ads are full-screen ads that cover the interface of their host app. They're typically displayed at natural transition points in the flow of an app, such as between activities or during the pause between levels in a game. When an app shows an interstitial ad, the user has the choice to either tap on the ad and continue to its destination or close it and return to the app</p></li><li><p class="paragraph"><a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/create-rewarded-interstitial.html">Rewarded interstitial</a> ads are fullscreen ads that allow you to reward users with in-app items for interacting with video ads, playable ads, and surveys</p></li></ul><h3 class="">Setting the Privacy information in the SDK</h3><ol><li><p class="paragraph">Call <a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/set-privacy.html">CloudX.setPrivacy()</a> to set the privacy information whenever it needs to be updated. It is recommended to update privacy values before <a href="-cloud-x -s-d-k -android/io.cloudx.sdk/-cloud-x/initialize.html">initialization</a> </p></li></ol><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">     CloudX.setPrivacy(<br>        CloudXPrivacy(<br>            isUserConsent = true, // user gave consent (GDPR)<br>            isAgeRestrictedUser = null, // null, flag is not set (COPPA).<br>            isDoNotSell = true // do not sell my data (CCPA)<br>        )<br>    )</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-975387495%2FPackages%2F165651098" anchor-label="io.cloudx.sdk" id="-975387495%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="-cloud-x -s-d-k -android/io.cloudx.sdk/index.html">io.cloudx.sdk</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-975387495%2FPackages%2F165651098"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-975387495%2FPackages%2F165651098" anchor-label="io.cloudx.sdk" id="-975387495%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+            <p class="paragraph">Here reside all the Public APIs of CloudX SDK</p>
+          </span></div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 CloudX, Inc. All Rights Reserved</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
