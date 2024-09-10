@@ -6,14 +6,13 @@
     <title>CloudExchange SDK Documentation</title>
     <style>
         :root {
-            --background: #ffffff;
-            --foreground: #1a1a1a;
-            --muted: #f4f4f5;
-            --border: #e4e4e7;
-            --accent: #18181b;
+            --background: #0f172a;
+            --foreground: #e2e8f0;
+            --muted: #1e293b;
+            --border: #334155;
+            --accent: #545454;
             --radius: 0.5rem;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
@@ -21,44 +20,58 @@
             background-color: var(--background);
             color: var(--foreground);
             line-height: 1.5;
+            display: flex;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
+        .sidebar {
+            width: 250px;
+            background-color: var(--muted);
+            height: 100vh;
+            padding: 1rem;
+            box-sizing: border-box;
         }
-
-        header {
-            background-color: var(--background);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 0;
-        }
-
-        .title {
+        .logo {
             font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 2rem;
         }
-
-        main {
-            padding: 2rem 0;
+        .nav-item {
+            padding: 0.5rem 0;
+            color: var(--foreground);
+            text-decoration: none;
+            display: block;
         }
-
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .search-bar {
+            background-color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.5rem 1rem;
+            color: var(--foreground);
+            width: 300px;
+        }
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
+            margin-bottom: 1rem;
         }
-
+        .description {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
         .os-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
         }
-
         .os-option {
             background-color: var(--muted);
             border: 1px solid var(--border);
@@ -69,50 +82,38 @@
             text-decoration: none;
             color: inherit;
         }
-
         .os-option:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
         }
-
         .os-option img {
             width: 64px;
             height: 64px;
             margin-bottom: 1rem;
         }
-
         .os-option h2 {
             font-size: 1.25rem;
             font-weight: 600;
             margin: 0;
         }
-
-        @media (max-width: 640px) {
-            .os-options {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="title">CloudExchange SDK Documentation</div>
+<div class="sidebar">
+    <div class="logo">CloudExchange</div>
+</div>
+<div class="main-content">
+    <h1>Select Your Operating System</h1>
+    <p class="description">Choose your platform to get started with CloudExchange SDK</p>
+    <div class="os-options">
+        <a href="/android" class="os-option">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android logo">
+            <h2>Android</h2>
+        </a>
+        <a href="/ios/documentation/cloudxcore/cloudxerror/" class="os-option">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="iOS logo">
+            <h2>iOS</h2>
+        </a>
     </div>
-</header>
-<main>
-    <div class="container">
-        <h1>Select Your Operating System</h1>
-        <div class="os-options">
-            <a href="/android" class="os-option">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android logo">
-                <h2>Android</h2>
-            </a>
-            <a href="/ios/documentation/cloudxcore/cloudxerror/" class="os-option">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="iOS logo">
-                <h2>iOS</h2>
-            </a>
-        </div>
-    </div>
-</main>
+</div>
 </body>
 </html>
